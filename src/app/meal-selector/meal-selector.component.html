@@ -1,0 +1,19 @@
+<div>
+  <label for="meals">Select meals:</label>
+  <input list="meals" id="meals" [(ngModel)]="selectedMeal">
+  <datalist id="meals">
+    <option *ngFor="let meal of mealOptions" [value]="meal.name">{{ meal.name }}</option>
+  </datalist>
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" [(ngModel)]="quantity" (input)="calculateNutrition()">
+
+  <button (click)="addMeal()">Add Meal</button>
+
+  <div *ngIf="selectedMeals.length > 0">
+    <h3>Selected Meals:</h3>
+    <div *ngFor="let meal of selectedMeals">
+      <p>{{ meal.name }} - Calories: {{ meal.calories * quantity }}, Protein: {{ meal.protein * quantity }}</p>
+    </div>
+  </div>
+</div>

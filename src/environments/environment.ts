@@ -1,11 +1,12 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyB48sF4wwwIPrnQvG7_5DHAIYAVhCQLfi4',
-    authDomain: 'getmgaddar.firebaseapp.com',
-    projectId: 'getmgaddar',
-    storageBucket: 'getmgaddar.appspot.com',
-    messagingSenderId: '597316777027',
-    appId: '1:597316777027:web:b8c19773622fc2d5e010f6',
+    apiKey: "AIzaSyB1r1rYecg9sDnkaerYhIw1QoErgzQcyqI",
+    authDomain: "big3adalat.firebaseapp.com",
+    projectId: "big3adalat",
+    storageBucket: "big3adalat.appspot.com",
+    messagingSenderId: "1060011481534",
+    appId: "1:1060011481534:web:45626a87e1dc70861f81ef",
+    measurementId: "G-2SZLJY4DQL"
   },
 };
