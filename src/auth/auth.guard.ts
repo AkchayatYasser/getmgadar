@@ -12,21 +12,21 @@ import { AuthService } from './auth.service';
   providedIn: 'root',
 })
 export class AuthGuard {
-  private readonly router: Router = inject(Router);
-  private authService = inject(AuthService);
+ // private readonly router: Router = inject(Router);
+  //private authService = inject(AuthService);
 
-  public canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): boolean | Observable<boolean> {
-    return this.authService.getAuthState().pipe(
-      map((state) => {
-        if (!state) {
-          this.router.navigate(['/auth/login']);
-          return false;
-        }
-        return true;
-      })
-    );
-  }
+  constructor(private authService: AuthService, public router: Router) {}
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ):
+    | Observable<boolean | UrlTree>
+    | Promise<boolean | UrlTree>
+    | boolean
+    | UrlTree {
+    if (!this.authService.isLoggedIn) {
+      this.router.navigate(['']);
+    }
+    return true;
+  }
 }

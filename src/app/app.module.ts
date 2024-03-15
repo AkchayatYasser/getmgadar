@@ -14,6 +14,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SignupComponent } from 'src/auth/components/signup.component';
 import { MealSelectorComponent } from '../auth/components/meal-selector/meal-selector.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 
 
@@ -33,6 +35,7 @@ import { MealSelectorComponent } from '../auth/components/meal-selector/meal-sel
     MatFormFieldModule,
     FormsModule,
     SignupComponent,
+    NgxChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

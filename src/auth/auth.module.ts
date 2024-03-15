@@ -5,6 +5,7 @@ import { SignupComponent } from './components/signup.component';
 import { FormsModule } from '@angular/forms';
 
 
+
 const routes: Routes = [
   {
     path: 'login',

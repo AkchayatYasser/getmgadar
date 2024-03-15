@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Color, NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 @Component({
   selector: 'app-meal-selector',
@@ -24,6 +26,7 @@ import { Component } from '@angular/core';
         <p>Total Calories: {{ totalCalories }}</p>
         <p>Total Protein: {{ totalProtein }}</p>
       </div>
+
     </div>
   `,
   styleUrls: [ './meal-selector.component.scss'],
