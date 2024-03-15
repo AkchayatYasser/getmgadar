@@ -66,7 +66,7 @@ import { ButtonModule } from 'primeng/button';
                 <p-button
                   label="Don't have an account?"
                   styleClass="p-button-link"
-                  routerLink="/sign-up"
+                  routerLink="/auth/sign-up"
                 ></p-button>
               </div>
             </ng-template>
@@ -81,6 +81,7 @@ import { ButtonModule } from 'primeng/button';
 
 })
 export class LoginComponent implements OnInit {
+
   loginForm!: FormGroup;
   constructor(private router: Router, private authService: AuthService){
   }
@@ -98,6 +99,12 @@ export class LoginComponent implements OnInit {
       this.authService.SignIn(this.loginForm.value.email, this.loginForm.value.password)
     }
   }
+
+redirectToSignUp() {
+  this.router.navigate(['/auth/signup']);
+}
+
+
 
 }
 

@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     component: AppComponent,
-    //canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
   },
    {
     path: 'auth',

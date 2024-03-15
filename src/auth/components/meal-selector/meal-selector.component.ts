@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Color, NgxChartsModule } from '@swimlane/ngx-charts';
+import { AuthService } from '../../auth.service';
+
 
 
 @Component({
@@ -27,11 +28,15 @@ import { Color, NgxChartsModule } from '@swimlane/ngx-charts';
         <p>Total Protein: {{ totalProtein }}</p>
       </div>
 
+      <button (click)="logout()">Logout</button>
     </div>
   `,
   styleUrls: [ './meal-selector.component.scss'],
 })
 export class MealSelectorComponent {
+
+  constructor(private authService: AuthService) {}
+
   selectedMealName: string = '';
   quantity: number = 1;
   mealOptions: { name: string, calories: number, protein: number }[] = [
@@ -71,5 +76,9 @@ export class MealSelectorComponent {
         this.totalProtein += mealData.protein * meal.quantity;
       }
     }
+  }
+
+  logout() {
+    this.authService.SignOut();
   }
 }

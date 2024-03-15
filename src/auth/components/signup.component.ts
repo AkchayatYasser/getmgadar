@@ -23,7 +23,7 @@ import { ButtonModule } from 'primeng/button';
 
 export class SignupComponent implements OnInit {
   signupForm!: FormGroup;
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router,) {}
   ngOnInit(): void {
     this.createForm();
   }
@@ -43,4 +43,9 @@ export class SignupComponent implements OnInit {
       );
     }
   }
+
+redirectToLogin() {
+  this.router.navigate(['/auth/login']);
+}
+
 }

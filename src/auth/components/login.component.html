@@ -20,10 +20,9 @@
           <ng-template pTemplate="footer">
             <div class="flex justify-content-center align-items-center">
               <button pButton pRipple label="Log In" (click)="login()"></button>
-              <p-button label="Forgot Password?" styleClass="p-button-link" routerLink="/reset-password"></p-button>
             </div>
             <div class="mt-2 flex justify-content-center align-items-center">
-              <p-button label="Don't have an account?" styleClass="p-button-link" routerLink="/sign-up"></p-button>
+              <p-button label="Don't have an account?" styleClass="p-button-link" (click)="redirectToSignUp()"></p-button>
             </div>
           </ng-template>
         </p-card>
