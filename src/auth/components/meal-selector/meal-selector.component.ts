@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../auth.service';
+import { ChartModule } from 'primeng/chart';
+
 
 
 
@@ -30,6 +32,9 @@ import { AuthService } from '../../auth.service';
 
       <button (click)="logout()">Logout</button>
     </div>
+
+
+
   `,
   styleUrls: [ './meal-selector.component.scss'],
 })
@@ -81,4 +86,8 @@ export class MealSelectorComponent {
   logout() {
     this.authService.SignOut();
   }
+
+  // Chart test
+
+  
 }

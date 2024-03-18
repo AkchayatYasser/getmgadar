@@ -19,6 +19,7 @@ import { ButtonModule } from 'primeng/button';
   standalone: true,
   imports: [MatFormFieldModule, MatInputModule, CardModule, ButtonModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
   /* template: `
   <form [formGroup]="loginForm">
     <div class="grid">

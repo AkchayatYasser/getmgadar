@@ -15,6 +15,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { SignupComponent } from 'src/auth/components/signup.component';
 import { MealSelectorComponent } from '../auth/components/meal-selector/meal-selector.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartModule } from 'primeng/chart';
+
 
 
 
@@ -36,6 +38,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     FormsModule,
     SignupComponent,
     NgxChartsModule,
+    ChartModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

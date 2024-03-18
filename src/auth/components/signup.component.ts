@@ -16,6 +16,7 @@ import { ButtonModule } from 'primeng/button';
   standalone: true,
   selector: 'mg-signup',
   templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.scss'],
   //template: `<h1>hey from signup</h1>`,
   imports: [MatFormFieldModule, MatInputModule, CardModule, ButtonModule, FormsModule, ReactiveFormsModule],
 })
